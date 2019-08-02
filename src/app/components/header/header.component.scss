@@ -1,0 +1,23 @@
+.navbar {
+  color: #ffffff;
+  background-color: #0f2244;
+  height: 50px;
+  margin-bottom: 10px;
+ img {
+    height: 40px;
+    width: 160px;
+  }
+  a {
+    cursor: pointer;
+    padding-right: 30px;
+    padding-top: 10px;
+    color: white;
+    i {
+      font-size:24px;
+      color: #FFFFFF;
+      &:hover {
+        color: #707070;
+      }
+    }
+  }
+}

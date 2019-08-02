@@ -1,0 +1,14 @@
+<nav class = "navbar navbar-expand-sm navbar-dark">
+  <div class = "navbar-nav mx-right" style = "padding-left: 40px">
+    <img src="../../../assets/images/logo.jpg">
+  </div>
+    <div class="navbar-nav mx-auto">
+
+    </div>
+  <div class="navbar-nav mx-left" style="padding-right: 40px;">
+    <a *ngIf="displayHomeLink" class="nav-link" (click)="navigateToHome()"><i class="fa fa-home"></i></a>
+    <a *ngIf="!displayLogOutLink" class="nav-link" (click)="navigate('login')">Log In</a>
+    <a *ngIf="displayLogOutLink" class="nav-link" (click)="navigate('login')">Log Out</a>
+  </div>
+
+</nav>

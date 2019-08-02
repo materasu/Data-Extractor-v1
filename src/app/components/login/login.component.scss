@@ -1,0 +1,37 @@
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    position: absolute;
+    width: 7.5cm;
+    height: 10cm;
+    margin: 0 auto; /* Added */
+    float: none; /* Added */
+    top: 15%;
+    left: 40%;
+    .card-header {
+        font-family: sans-serif;
+        font-size: 20pt;
+        font-weight: 150;
+        color:  #0f2244;
+    };
+    .card-body {
+       .bottom-pieces {
+           margin: auto;
+       }
+        a {
+            position: absolute;
+            top: 75%;
+            left: 17%;
+            cursor: pointer;
+            &:hover {
+                text-decoration: underline;
+            };
+        }
+    }
+   
+}
+//  button {
+//             position:absolute;
+//             top: 55%;
+//             left: 36%;
+//         }
+//         

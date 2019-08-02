@@ -1,0 +1,16 @@
+app-header {
+  top: 0px;
+}
+
+.content {
+  text-align: center;
+  height: 92%;
+  overflow:scroll;
+
+}
+
+app-footer {
+  position: fixed;
+  width: 100%;
+  bottom: 0px;
+}

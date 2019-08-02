@@ -1,0 +1,39 @@
+/* You can add global styles to this file, and also import other style files */
+/* You can add global styles to this file, and also import other style files */
+
+@import "../node_modules/bootstrap/dist/css/bootstrap.css";
+@import "../node_modules/font-awesome/css/font-awesome.css";
+/* @import "../node_modules/primeng/"; */
+
+body,
+html {
+  background: #ffffff;
+  color: #111111;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  font-family: "Raleway", sans-serif;
+  overflow: hidden;
+  height: 100%;
+}
+body .ui-progressbar {
+  position: fixed;
+  display: block;
+  background: transparent;
+  height: 5px;
+  width: 100%;
+  margin-bottom: 5px;
+  border: none;
+  top: 50px;
+  z-index: 9999;
+}
+.pdfloader .ui-progressbar {
+  position: absolute;
+  top: 0;
+}
+h2 {
+  margin-top: 20px;
+}
+body .ui-progressbar .ui-progressbar-value {
+  background: #0f2244;
+}

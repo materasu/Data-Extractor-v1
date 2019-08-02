@@ -1,0 +1,69 @@
+<div class="card">
+    <div class="card-header">
+        Sign Up
+    </div>
+    <div class="card-body">
+        <form [formGroup]="signUpForm">
+            <!-- <div *ngIf="WrongCredentials" style="font-size: 15px; color: darkred">
+                Invalid Email ID/Password
+            </div> -->
+            <div class="input-group mb-3">
+                <div *ngIf="emailID.invalid" style="color:darkred">*</div>
+                <div class="input-group-prepend">
+                    <span class="input-group-text"> <i class="fa fa-envelope-o fa-fw"></i></span>
+                </div>
+                <input type="text" class="form-control" formControlName="emailID" placeholder="Enter Email Address"
+                    aria-label="emailID" aria-describedby="basic-addon1" required>
+                
+            </div>
+            <div class="input-group mb-3">
+                <div *ngIf="userName.invalid" style="color:darkred">*</div>
+                <div class="input-group-prepend">
+                    <span class="input-group-text"> <i class="fa fa-user fa-fw"></i></span>
+                </div>
+                <input type="text" class="form-control" formControlName="userName" placeholder="Enter User Name" aria-label="User Name"
+                    aria-describedby="basic-addon1">  
+            </div>
+            <div class="input-group mb-3">
+                <div *ngIf="password.invalid" style="color:darkred">*</div>
+                <div class="input-group-prepend">
+                    <span class="input-group-text"> <i class="fa fa-key fa-fw"></i></span>
+                </div>
+                <input type="password" class="form-control" formControlName="password" placeholder="Enter Password"
+                    aria-label="Password" aria-describedby="basic-addon1">
+                
+            </div>
+            <div class="input-group mb-3">
+                <div *ngIf="confirmPassword.invalid" style="color:darkred">*</div>
+                <div class="input-group-prepend">
+                    <span class="input-group-text"> <i class="fa fa-key fa-fw"></i></span>
+                </div>
+                <input type="password" class="form-control" formControlName="confirmPassword" placeholder="Confirm Password" aria-label="Confirm Password"
+                    aria-describedby="basic-addon1">
+                
+            </div>
+            <div class="input-group mb-3">
+                <div *ngIf="useDefaultUseCases.invalid" style="color:darkred">*</div>
+                <div class="input-group-prepend">
+                    <label class="input-group-text" for="inputGroupSelect01" style="font-size: 12px; background-color: white">Do you want to use existing Use Cases?</label>
+                </div>
+                <select class="form-control" id="inputGroupSelect01" formControlName="useDefaultUseCases">
+                    <option selected value = "No">No</option>
+                    <option value="Yes">Yes</option>
+                </select>
+                
+            </div>
+            <!-- <div class="form-group col-md-4">
+                <select id="inputState" class="form-control" formControlName="useDefaultUseCases" aria-placeholder="Do you">
+                    <option selected>Yes</option>
+                    <option>No</option>
+                </select>
+            </div> -->
+        </form>
+        <div class="bottom-pieces">
+            <button class="btn btn-success"  *ngIf = "signUpForm.invalid" disabled="disabled">Sign Up</button>
+            <button class="btn btn-success" (click) = "checkForm()" *ngIf="!signUpForm.invalid">Sign Up</button>
+        </div>
+        
+    </div>
+</div>

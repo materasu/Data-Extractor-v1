@@ -1,0 +1,30 @@
+<div class="card">
+    <div class = "card-header">
+        Log In
+    </div>
+    <div class="card-body">
+        <form [formGroup]="loginForm">
+            <div *ngIf="WrongCredentials" style="font-size: 15px; color: darkred">
+                Invalid Email ID/Password
+            </div>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text"> <i class="fa fa-envelope-o fa-fw"></i></span>
+                </div>
+                <input type="text" class="form-control" formControlName = "Email ID" placeholder="Email Address" aria-label="Username"
+                    aria-describedby="basic-addon1">
+            </div>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text"> <i class="fa fa-key fa-fw"></i></span>
+                </div>
+                <input type="password" class="form-control" formControlName="Password" placeholder="Password" aria-label="Password"
+                    aria-describedby="basic-addon1">
+            </div>
+        </form>
+        <div class = "bottom-pieces">
+            <button class="btn btn-success" (click)="checkForm()">Log In</button>
+        </div>
+        <a style="color: blue" (click)="navigateNewUser()">New User? Register here.</a>    
+    </div>
+</div>
